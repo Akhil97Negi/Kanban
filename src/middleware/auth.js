@@ -1,28 +1,5 @@
 import jwt from "jsonwebtoken";
 
-// const auth = async (req,res,next) =>{
-//     if(!req.headers.authorization){
-//         return res.status(401).json({message : "token is not provided... please provide token"})
-//     }
-
-//     const token = req.headers["authorization"].split(" ")[1];
-
-//     //here we have to check if token is blacklist or not
-
-//     //if not and token is present then
-//     if(token){
-//         jwt.verify(token,"kanban", (err,result) =>{
-//         if(err) console.log(err.message);
-//         if(result){
-//             req.user = result;
-//             console.log(result);
-//             next();
-//         }else{
-//             res.status(400).send("this is not a valid token");
-//         }
-//         });
-//     }
-// }
 
 const auth = async (req, res, next) => {
     try {

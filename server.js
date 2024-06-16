@@ -23,7 +23,7 @@ app.get("/home", (req, res) => {
 //userRouter
 app.use('/user', userRouter);
 
-//taskRouter  task :- task /add /update /delete role base access added from taskRouter
+
 app.use('/task', auth, taskRouter);
 
 app.listen(port, async()=>{
